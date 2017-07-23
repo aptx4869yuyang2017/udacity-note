@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>append demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  a.test{
+      font-weight: bold;
+      font-size: 40px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<p>I would like to say: </p>
+<a href="www.baidu.com"> hello </a>
+
+<script>
+$(document).ready(function() {
+    $("a").addClass("test");
+    $("a").click(function(event) {
+        event.preventDefault();
+        $(this).hide("slow");
+    });
+});
+</script>
+
+</body>
+</html>
